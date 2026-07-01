@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0b">
+<title>Politika privatnosti — Tajne Online Trenerstva | Frane Jerčić</title>
+<meta name="description" content="Politika privatnosti i zaštite osobnih podataka za edukaciju Tajne Online Trenerstva, Frane Jerčić.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://franejercic.com/politika-privatnosti.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #0a0a0b;
+    --bg-alt:   #111113;
+    --card:     #16161a;
+    --line:     rgba(255,255,255,.08);
+    --ink:      #f2f1ef;
+    --ink-dim:  rgba(242,241,239,.55);
+    --red:      #e8341c;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,11,.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand span { color: var(--red); }
+  .back-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-dim);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--ink); }
+  .back-link svg { flex-shrink: 0; }
+
+  /* ─── MAIN CONTENT ─── */
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .pp-hero {
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .pp-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+  .pp-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 6vw, 56px);
+    letter-spacing: 1px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+  .pp-hero p {
+    color: var(--ink-dim);
+    font-size: 15px;
+  }
+  .pp-updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--ink-dim);
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .pp-updated span { width: 6px; height: 6px; background: var(--red); border-radius: 50%; display: inline-block; }
+
+  /* ─── SECTIONS ─── */
+  .pp-section {
+    margin-bottom: 48px;
+  }
+  .pp-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: .8px;
+    color: var(--ink);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .pp-section p {
+    color: var(--ink-dim);
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .pp-section p:last-child { margin-bottom: 0; }
+  .pp-section ul {
+    list-style: none;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .pp-section ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--ink-dim);
+    font-size: 15px;
+  }
+  .pp-section ul li::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+
+  .pp-contact-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 2px solid var(--red);
+    border-radius: 6px;
+    padding: 24px 28px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pp-contact-card .contact-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: .8px;
+    color: var(--ink);
+  }
+  .pp-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+  .pp-contact-row svg { color: var(--red); flex-shrink: 0; }
+  .pp-contact-row a { color: var(--ink-dim); text-decoration: none; border-bottom: 1px solid var(--line); transition: color .2s; }
+  .pp-contact-row a:hover { color: var(--ink); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 32px 24px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-dim);
+  }
+  footer a { color: var(--ink-dim); text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { color: var(--ink); }
+
+  @media (max-width: 480px) {
+    main { padding: 48px 20px 80px; }
+    .navbar { padding: 14px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <a href="index.html" class="brand">TAJNE <span>ONLINE</span> TRENERSTVA</a>
+    <a href="index.html" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Natrag na stranicu
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <div class="pp-hero">
+    <div class="pp-eyebrow">Pravni dokument</div>
+    <h1>Politika<br>Privatnosti</h1>
+    <p>Ova politika privatnosti objašnjava kako prikupljamo, koristimo i štitimo vaše osobne podatke u skladu s Općom uredbom o zaštiti podataka (GDPR) i važećim zakonodavstvom Republike Hrvatske.</p>
+    <div class="pp-updated"><span></span> Zadnje ažuriranje: srpanj 2026.</div>
+  </div>
+
+  <div class="pp-section">
+    <h2>1. Voditelj obrade podataka</h2>
+    <div class="pp-contact-card">
+      <div class="contact-name">Frane Jerčić</div>
+      <div class="pp-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@franejercic.com">info@franejercic.com</a>
+      </div>
+      <div class="pp-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <a href="https://wa.me/1234" target="_blank" rel="noopener">+1234... (WhatsApp)</a>
+      </div>
+      <div class="pp-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <a href="https://www.instagram.com/postani_trener" target="_blank" rel="noopener">@postani_trener</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pp-section">
+    <h2>2. Koje podatke prikupljamo</h2>
+    <p>Prikupljamo samo podatke koji su nužni za pružanje usluge i komunikaciju s vama:</p>
+    <ul>
+      <li>Ime i prezime — za personalizaciju komunikacije i izrade profila polaznika</li>
+      <li>E-mail adresa — za slanje informacija o programu, potvrde prijave i komunikaciju</li>
+      <li>Broj mobitela — samo ako ga dobrovoljna navedete radi WhatsApp komunikacije</li>
+      <li>Podaci o plaćanju — obrađuju se isključivo putem sigurnih platnih procesora (ne pohranjujemo podatke o kartici)</li>
+      <li>Podaci o korištenju stranice — anonimni analitički podaci (IP adresa, preglednik, trajanje posjeta) putem Google Analytics</li>
+    </ul>
+  </div>
+
+  <div class="pp-section">
+    <h2>3. Svrha i pravna osnova obrade</h2>
+    <p>Vaše podatke obrađujemo isključivo za sljedeće svrhe:</p>
+    <ul>
+      <li><strong>Izvršenje ugovora</strong> — obrada prijave, pristup edukacijskim materijalima i podrška polaznicima</li>
+      <li><strong>Legitimni interes</strong> — poboljšanje sadržaja i korisničkog iskustva stranice</li>
+      <li><strong>Privola</strong> — slanje newslettera i marketinških poruka (možete se odjaviti u bilo kojem trenutku)</li>
+      <li><strong>Zakonska obveza</strong> — čuvanje računovodstvenih i poreznih podataka sukladno važećem zakonodavstvu</li>
+    </ul>
+  </div>
+
+  <div class="pp-section">
+    <h2>4. Dijeljenje podataka s trećim stranama</h2>
+    <p>Ne prodajemo niti iznajmljujemo vaše osobne podatke trećim stranama. Podatke možemo dijeliti samo s:</p>
+    <ul>
+      <li>Platnim procesori (npr. Stripe, PayPal) — isključivo radi naplate</li>
+      <li>Platformama za e-mail marketing (npr. Mailchimp) — radi slanja newslettera uz vašu prethodnu privolu</li>
+      <li>Google Analytics — anonimni analitički podaci za poboljšanje stranice</li>
+      <li>Nadležnim tijelima — ako to zahtijeva zakon ili sudski nalog</li>
+    </ul>
+    <p>Svi naši partneri su obvezani odgovarajućim ugovorima o obradi podataka i pridržavaju se GDPR-a.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>5. Pohrana i sigurnost podataka</h2>
+    <p>Vaši podaci pohranjuju se na sigurnim serverima unutar Europskog gospodarskog prostora (EGP). Koristimo standardne mjere zaštite:</p>
+    <ul>
+      <li>SSL/TLS enkripcija svih komunikacija</li>
+      <li>Ograničen pristup podacima — samo ovlaštene osobe</li>
+      <li>Redovite sigurnosne provjere i ažuriranja sustava</li>
+    </ul>
+    <p>Podatke čuvamo onoliko dugo koliko je potrebno za ispunjenje svrhe za koju su prikupljeni, a najdulje 5 godina od zadnje interakcije, osim ako zakon ne propisuje drugačije.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>6. Vaša prava</h2>
+    <p>Sukladno GDPR-u, imate sljedeća prava u pogledu svojih osobnih podataka:</p>
+    <ul>
+      <li><strong>Pravo na pristup</strong> — možete zatražiti kopiju svih podataka koje čuvamo o vama</li>
+      <li><strong>Pravo na ispravak</strong> — možete zatražiti ispravak netočnih ili nepotpunih podataka</li>
+      <li><strong>Pravo na brisanje</strong> — možete zatražiti brisanje svojih podataka ("pravo na zaborav")</li>
+      <li><strong>Pravo na ograničenje obrade</strong> — možete zatražiti privremeno zaustavljanje obrade</li>
+      <li><strong>Pravo na prenosivost</strong> — možete dobiti svoje podatke u strojno čitljivom formatu</li>
+      <li><strong>Pravo na prigovor</strong> — možete se usprotiviti obradi podataka u svrhe izravnog marketinga</li>
+      <li><strong>Pravo na povlačenje privole</strong> — u bilo kojem trenutku, bez utjecaja na zakonitost prethodne obrade</li>
+    </ul>
+    <p>Za ostvarivanje bilo kojeg od navedenih prava, kontaktirajte nas putem e-maila ili WhatsAppa navedenih gore. Odgovorit ćemo u roku od 30 dana.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>7. Kolačići (Cookies)</h2>
+    <p>Stranica koristi sljedeće vrste kolačića:</p>
+    <ul>
+      <li><strong>Nužni kolačići</strong> — potrebni za ispravno funkcioniranje stranice (npr. pohrana odabrane teme)</li>
+      <li><strong>Analitički kolačići</strong> — Google Analytics za praćenje anonimnog prometa i poboljšanje sadržaja</li>
+    </ul>
+    <p>Korištenjem stranice pristajete na korištenje nužnih kolačića. Analitičke kolačiće možete onemogućiti u postavkama preglednika ili putem <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out</a> dodatka.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>8. Promjene politike privatnosti</h2>
+    <p>Zadržavamo pravo izmjene ove politike privatnosti. Sve značajne promjene objavit ćemo na ovoj stranici s ažuriranim datumom. Preporučujemo da povremeno pregledate ovu stranicu.</p>
+    <p>Nastavkom korištenja stranice nakon objave promjena smatrat ćemo da ste ih prihvatili.</p>
+  </div>
+
+  <div class="pp-section">
+    <h2>9. Pritužbe</h2>
+    <p>Ako smatrate da smo povrijedili vaša prava zaštite osobnih podataka, imate pravo podnijeti pritužbu nadležnom nadzornom tijelu:</p>
+    <div class="pp-contact-card" style="border-top-color: var(--line);">
+      <div class="contact-name" style="font-size:16px; font-family:'Inter'; font-weight:600;">Agencija za zaštitu osobnih podataka (AZOP)</div>
+      <div class="pp-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <a href="https://azop.hr" target="_blank" rel="noopener">azop.hr</a>
+      </div>
+      <div class="pp-contact-row">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:azop@azop.hr">azop@azop.hr</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div>
+    © 2026 Frane Jerčić · Sva prava pridržana ·
+    <a href="index.html">Povratak na glavnu stranicu</a>
+  </div>
+</footer>
+
+</body>
+</html>
