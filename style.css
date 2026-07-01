@@ -326,34 +326,34 @@ header {
 .check-list { display: grid; gap: 0; max-width: 920px; margin-top: 36px; }
 .check-item {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   align-items: flex-start;
-  padding: 24px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--line);
 }
 .check-item:first-child { border-top: none; }
 .check-item:last-child { border-bottom: none; }
 .check-item .mark {
-  flex: 0 0 30px;
-  height: 30px;
+  flex: 0 0 34px;
+  height: 34px;
   border: 1px solid var(--red);
   color: var(--red);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 2px;
 }
-.check-item p { font-size: 17px; color: var(--ink-dim); }
+.check-item p { font-size: 19px; color: var(--ink-dim); }
 .check-item p b { color: rgba(255,255,255,.72); }
 
 .pull-quote {
-  margin-top: 48px;
-  padding: 32px 36px;
+  margin-top: 52px;
+  padding: 36px 40px;
   border-left: 3px solid var(--red);
   background: var(--card);
-  font-size: 19px;
+  font-size: 21px;
   font-style: italic;
   color: var(--ink);
   max-width: 920px;
@@ -363,17 +363,17 @@ header {
 .get-list { margin-top: 48px; }
 .get-item {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   align-items: flex-start;
-  padding: 28px 0;
+  padding: 34px 0;
   border-top: 1px solid var(--line);
 }
 .get-item:first-child { border-top: none; }
 .get-item:last-child { border-bottom: none; }
 .get-item .ic {
   flex: 0 0 auto;
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   color: var(--red);
   display: flex;
   align-items: center;
@@ -381,9 +381,9 @@ header {
   margin-top: 2px;
 }
 .get-item .ic svg { width: 100%; height: 100%; }
-.get-item .txt { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
-.get-item h3 { font-family: 'Bebas Neue'; font-weight: 400; font-size: 22px; letter-spacing: .5px; text-transform: uppercase; }
-.get-item p { color: var(--ink-dim); font-size: 15.5px; }
+.get-item .txt { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.get-item h3 { font-family: 'Bebas Neue'; font-weight: 400; font-size: 27px; letter-spacing: 1px; text-transform: uppercase; }
+.get-item p { color: var(--ink-dim); font-size: 17px; }
 
 /* ─── WHY THIS COURSE ─── */
 .why-grid {
@@ -433,12 +433,12 @@ header {
 .split h3 { font-size: 32px; margin-bottom: 24px; line-height: 1.2; }
 .split ul { list-style: none; margin-top: 8px; }
 .split li {
-  padding: 13px 0 13px 32px;
+  padding: 16px 0 16px 36px;
   border-top: 1px solid var(--line);
   color: var(--ink-dim);
-  font-size: 15.5px;
+  font-size: 17px;
   position: relative;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .split li::before {
   position: absolute;
@@ -507,9 +507,9 @@ header {
   line-height: 1;
 }
 .module .mnum.active { -webkit-text-stroke: 1px var(--red); color: transparent; }
-.module h3 { font-size: 26px; display: flex; align-items: center; gap: 12px; }
-.module h3 .ic { font-family: 'Inter'; font-size: 22px; }
-.module p { margin-top: 10px; color: var(--ink-dim); font-size: 16px; max-width: 640px; }
+.module h3 { font-size: 28px; display: flex; align-items: center; gap: 12px; }
+.module h3 .ic { font-family: 'Inter'; font-size: 24px; }
+.module p { margin-top: 10px; color: var(--ink-dim); font-size: 17px; max-width: 640px; }
 
 /* ─── TESTIMONIALS SLIDER ─── */
 .tmonials { margin-top: 40px; }
@@ -850,7 +850,7 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
   .video-wrap { margin-top: 24px; }
 
   .check-item { gap: 14px; }
-  .check-item p { font-size: 15.5px; }
+  .check-item p { font-size: 16.5px; }
   .pull-quote { display: none; }
 
   .modules-head { margin-bottom: 28px; }
@@ -875,13 +875,13 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
       var(--bg) 100%);
   }
   .split h3 { font-size: 22px; }
-  .split li { font-size: 14px; }
+  .split li { font-size: 15px; }
   .split .quote { display: block; margin-top: 24px; padding-top: 0; font-size: 15px; }
 
   .module { grid-template-columns: 1fr; gap: 6px; padding: 24px 0; }
   .module .mnum { font-size: 28px; display: inline-block; }
-  .module h3 { font-size: 20px; margin-top: 4px; }
-  .module p { font-size: 14.5px; }
+  .module h3 { font-size: 22px; margin-top: 4px; }
+  .module p { font-size: 15.5px; }
 
   .tcard { flex: 0 0 100%; }
 
