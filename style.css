@@ -928,7 +928,14 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 }
 [data-theme="light"] .nav-links a { color: var(--ink); }
 [data-theme="light"] .nav-links a:hover { color: var(--red); }
-[data-theme="light"] .nav-cta { background: rgba(var(--accent-rgb),.1); color: var(--red); }
+[data-theme="light"] .nav-cta {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--red) 82%, #fff 18%),
+    var(--red) 55%,
+    color-mix(in srgb, var(--red) 78%, #000 22%));
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(var(--accent-rgb),.3);
+}
 
 /* Hero */
 [data-theme="light"] .hero::before {
@@ -1000,8 +1007,9 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 /* CTA / Pricing */
 [data-theme="light"] .cta-block {
   background:
-    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(var(--accent-rgb),.09) 0%, transparent 70%),
-    linear-gradient(180deg, #f5f4f2 0%, var(--bg) 100%);
+    radial-gradient(ellipse 100% 65% at 50% 0%, rgba(var(--accent-rgb),.18) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(var(--accent-rgb),.07) 0%, transparent 100%),
+    linear-gradient(180deg, #f2f1ef 0%, var(--bg) 100%);
 }
 [data-theme="light"] .cta-block h2 { color: var(--ink); }
 [data-theme="light"] .cta-block .lead { color: var(--ink-dim); }
