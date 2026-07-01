@@ -105,6 +105,34 @@
   </div>
 </div>
 
+<!-- ─── VIDEO ─── -->
+<section class="video-section">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;">Pogledaj prije nego nastaviš</div>
+    <h2>Tajne online trenerstva — uvod</h2>
+    <a
+      class="video-wrap video-facade"
+      href="https://www.youtube.com/watch?v=B8vzgKFYn_E"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Pogledaj video na YouTubeu"
+    >
+      <img
+        src="https://img.youtube.com/vi/B8vzgKFYn_E/maxresdefault.jpg"
+        alt="Tajne Online Trenerstva — uvod video"
+        loading="lazy"
+        onerror="this.src='https://img.youtube.com/vi/B8vzgKFYn_E/hqdefault.jpg'"
+      >
+      <div class="video-play" aria-hidden="true">
+        <svg viewBox="0 0 68 48" width="68" height="48">
+          <path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8 0 34 0 34 0S12.2 0 7.4 1.7c-2.9.8-5.1 3.1-5.9 6C0 12.5 0 24 0 24s0 11.5 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.2 48 34 48 34 48s21.8 0 26.6-1.7c2.9-.8 5.1-3.1 5.9-6C68 35.5 68 24 68 24s0-11.5-1.5-16.3z" fill="var(--red)"/>
+          <path d="M45 24L27 14v20" fill="#fff"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+</section>
+
 <!-- ─── SOCIAL PROOF ─── -->
 <section>
   <div class="wrap">
@@ -236,34 +264,6 @@
         <button class="slider-btn" id="tNext" aria-label="Sljedeći">&#8594;</button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ─── VIDEO ─── -->
-<section class="video-section">
-  <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;">Pogledaj prije nego nastaviš</div>
-    <h2>Tajne online trenerstva — uvod</h2>
-    <
-      class="video-wrap video-facade"
-      href="https://www.youtube.com/watch?v=B8vzgKFYn_E"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Pogledaj video na YouTubeu"
-    >
-      <img
-        src="https://img.youtube.com/vi/B8vzgKFYn_E/maxresdefault.jpg"
-        alt="Tajne Online Trenerstva — uvod video"
-        loading="lazy"
-        onerror="this.src='https://img.youtube.com/vi/B8vzgKFYn_E/hqdefault.jpg'"
-      >
-      <div class="video-play" aria-hidden="true">
-        <svg viewBox="0 0 68 48" width="68" height="48">
-          <path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-6C55.8 0 34 0 34 0S12.2 0 7.4 1.7c-2.9.8-5.1 3.1-5.9 6C0 12.5 0 24 0 24s0 11.5 1.5 16.3c.8 2.9 3 5.2 5.9 6C12.2 48 34 48 34 48s21.8 0 26.6-1.7c2.9-.8 5.1-3.1 5.9-6C68 35.5 68 24 68 24s0-11.5-1.5-16.3z" fill="var(--red)"/>
-          <path d="M45 24L27 14v20" fill="#fff"/>
-        </svg>
-      </div>
-    </a>
   </div>
 </section>
 
@@ -716,6 +716,39 @@
 <div class="sticky-cta" id="stickyCta" aria-live="polite">
   <span>Spreman izgraditi svoj online coaching posao?</span>
   <a href="YOUR_CTA_URL" class="btn" style="font-size:16px;padding:12px 24px;">Prijavi se</a>
+</div>
+
+<!-- ─── THEME PICKER ─── -->
+<div class="tp" id="themePicker">
+  <button class="tp-btn" id="tpToggle" aria-label="Promjeni temu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+  </button>
+  <div class="tp-panel" id="tpPanel" hidden>
+    <div class="tp-label">Boja</div>
+    <div class="tp-swatches">
+      <button class="tp-swatch" data-color="#e8341c" style="background:#e8341c" aria-label="Crvena" title="Crvena"></button>
+      <button class="tp-swatch" data-color="#2563eb" style="background:#2563eb" aria-label="Plava" title="Plava"></button>
+      <button class="tp-swatch" data-color="#16a34a" style="background:#16a34a" aria-label="Zelena" title="Zelena"></button>
+      <button class="tp-swatch" data-color="#d97706" style="background:#d97706" aria-label="Žuta" title="Žuta"></button>
+      <button class="tp-swatch" data-color="#9333ea" style="background:#9333ea" aria-label="Ljubičasta" title="Ljubičasta"></button>
+      <button class="tp-swatch" data-color="#0891b2" style="background:#0891b2" aria-label="Cyan" title="Cyan"></button>
+      <button class="tp-swatch" data-color="#db2777" style="background:#db2777" aria-label="Roza" title="Roza"></button>
+    </div>
+    <div class="tp-label" style="margin-top:12px;">Pozadina</div>
+    <div class="tp-modes">
+      <button class="tp-mode" data-mode="dark">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Tamna
+      </button>
+      <button class="tp-mode" data-mode="light">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        Svijetla
+      </button>
+    </div>
+  </div>
 </div>
 
 <script src="main.js"></script>

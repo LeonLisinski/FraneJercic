@@ -907,10 +907,10 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 
 /* ─── LIGHT MODE ─── */
 [data-theme="light"] {
-  --bg:      #f8f7f5;
-  --bg-alt:  #edecea;
+  --bg:      #ffffff;
+  --bg-alt:  #f4f3f1;
   --card:    #ffffff;
-  --line:    rgba(0,0,0,.09);
+  --line:    rgba(0,0,0,.08);
   --ink:     #111110;
   --ink-dim: rgba(17,17,16,.5);
 }
@@ -920,7 +920,7 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 
 /* Header */
 [data-theme="light"] header {
-  background: rgba(248,247,245,.94);
+  background: rgba(255,255,255,.95);
   border-bottom: 1px solid var(--line);
   box-shadow: 0 1px 8px rgba(0,0,0,.06);
 }
@@ -954,12 +954,12 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 
 /* Split section – keep lightly tinted */
 [data-theme="light"] .split .pos {
-  background: linear-gradient(90deg, var(--bg) 0%, #f0eeec 40%, #ece9e5 100%);
+  background: linear-gradient(90deg, var(--bg) 0%, #f5f4f2 40%, #f0efed 100%);
 }
 [data-theme="light"] .split .neg {
   background: linear-gradient(90deg,
-    color-mix(in srgb, #f8f7f5 82%, var(--red) 18%) 0%,
-    color-mix(in srgb, #f8f7f5 88%, var(--red) 12%) 60%,
+    color-mix(in srgb, #ffffff 82%, var(--red) 18%) 0%,
+    color-mix(in srgb, #ffffff 88%, var(--red) 12%) 60%,
     var(--bg) 100%);
 }
 [data-theme="light"] .split .pos .quote { color: #6b5a35; text-shadow: none; }
@@ -983,6 +983,7 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 /* Sections */
 [data-theme="light"] .section-alt { background: var(--bg-alt); }
 [data-theme="light"] .check-item { color: var(--ink); }
+[data-theme="light"] .hero p.lead b { color: var(--ink); }
 [data-theme="light"] .check-item p b { color: var(--ink); }
 [data-theme="light"] .about-grid p b { color: var(--ink); }
 
@@ -996,7 +997,7 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 
 /* CTA / Pricing */
 [data-theme="light"] .cta-block {
-  background: linear-gradient(180deg, #f0eeec 0%, var(--bg) 100%);
+  background: linear-gradient(180deg, #f5f4f2 0%, var(--bg) 100%);
 }
 [data-theme="light"] .cta-block h2 { color: var(--ink); }
 [data-theme="light"] .cta-block .lead { color: var(--ink-dim); }
@@ -1010,7 +1011,7 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 
 /* Sticky CTA */
 [data-theme="light"] .sticky-cta {
-  background: rgba(248,247,245,.96);
+  background: rgba(255,255,255,.97);
   border-top: 1px solid var(--line);
   box-shadow: 0 -2px 12px rgba(0,0,0,.07);
 }
@@ -1028,11 +1029,11 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 /* Mobile split overrides in light mode */
 @media (max-width: 767px) {
   [data-theme="light"] .split .pos {
-    background: linear-gradient(180deg, #f0eeec 0%, var(--bg) 100%);
+    background: linear-gradient(180deg, #f5f4f2 0%, var(--bg) 100%);
   }
   [data-theme="light"] .split .neg {
     background: linear-gradient(180deg,
-      color-mix(in srgb, #f8f7f5 82%, var(--red) 18%) 0%,
+      color-mix(in srgb, #ffffff 82%, var(--red) 18%) 0%,
       var(--bg) 100%);
   }
 }
