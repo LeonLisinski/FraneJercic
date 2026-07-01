@@ -198,7 +198,7 @@ header {
   position: relative;
   z-index: 2;
   aspect-ratio: 4/5;
-  transform: translateY(60px) translateX(12%) scale(0.85);
+  transform: translateY(60px) translateX(12%) scale(0.72);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,11 +208,15 @@ header {
   flex: 1;
   object-fit: contain;
   object-position: bottom;
-  filter: drop-shadow(0 24px 48px rgba(0,0,0,.7)) drop-shadow(0 0 60px rgba(0,0,0,.4));
-  -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%),
-                      linear-gradient(to right, transparent 0%, black 6%, black 92%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 72%, transparent 100%),
-              linear-gradient(to right, transparent 0%, black 6%, black 92%, transparent 100%);
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.8));
+  -webkit-mask-image:
+    linear-gradient(to bottom, black 68%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 10%, black 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 4%);
+  mask-image:
+    linear-gradient(to bottom, black 68%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 10%, black 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 4%);
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
 }
