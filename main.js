@@ -122,15 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── Sticky CTA ──────────────────────────────────────────
   const sticky    = document.getElementById('stickyCta');
   const hero      = document.querySelector('.hero');
-  const footerCta = document.querySelector('.footer-cta');
+  const footerCta = document.querySelector('.cta-block');
 
   function updateSticky() {
     const heroBottom   = hero.getBoundingClientRect().bottom;
-    const footerTop    = footerCta ? footerCta.getBoundingClientRect().top : Infinity;
+    const ctaTop       = footerCta ? footerCta.getBoundingClientRect().top : Infinity;
     const windowH      = window.innerHeight;
     const stickyH      = sticky.offsetHeight;
 
-    if (heroBottom < 0 && footerTop > windowH) {
+    if (heroBottom < 0 && ctaTop > windowH) {
       sticky.classList.add('show');
       document.body.style.paddingBottom = stickyH + 'px';
     } else {

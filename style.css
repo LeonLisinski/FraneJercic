@@ -601,7 +601,93 @@ header {
 /* ─── CTA BLOCK ─── */
 .cta-block { text-align: center; background: linear-gradient(180deg, #160d0c, #0a0a0b); }
 .cta-block h2 { font-size: clamp(36px, 5.5vw, 60px); }
-.cta-block .lead { margin: 18px auto 36px; max-width: 780px; text-align: center; color: var(--ink-dim); font-size: 18px; line-height: 1.7; }
+.cta-block .lead { margin: 18px auto 0; max-width: 780px; text-align: center; color: var(--ink-dim); font-size: 18px; line-height: 1.7; }
+.price-block { margin: 36px auto 0; max-width: 600px; text-align: center; }
+.price-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+.price-features span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.price-features span::before {
+  content: "✓";
+  color: var(--red);
+  font-size: 16px;
+  font-weight: 700;
+}
+.price-hero {
+  position: relative;
+  display: inline-block;
+  padding: 36px 56px 28px;
+  margin-bottom: 32px;
+}
+.price-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(232,52,28,.18) 0%, transparent 70%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+.price-main {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 96px;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 60px rgba(232,52,28,.35);
+  position: relative;
+}
+.price-sub-unit {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink-dim);
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+  position: relative;
+}
+.price-was {
+  font-size: 15px;
+  color: var(--ink-dim);
+  text-decoration: line-through;
+  opacity: .55;
+}
+.price-save-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 0 16px rgba(232,52,28,.5);
+}
+.price-cta { font-size: 20px !important; padding: 20px 52px !important; }
+
 
 /* ─── FAQ ─── */
 .faq-list { margin-top: 30px; max-width: 920px; }
@@ -790,7 +876,17 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
   .cta-block { padding: 56px 0; }
   .cta-block h2 { font-size: clamp(28px, 8vw, 42px); margin-bottom: 28px; }
   .cta-block .lead { display: none; }
-  .cta-block .btn { font-size: 18px !important; padding: 16px 28px !important; width: 100%; max-width: 320px; display: block; margin: 0 auto; }
+  .price-features { gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+  .price-features span { font-size: 12px; gap: 5px; }
+  .price-main { font-size: 68px; }
+  .price-hero { padding: 24px 24px 20px; }
+  .price-cta { font-size: 16px !important; padding: 16px 24px !important; width: 100%; max-width: 340px; display: block; margin: 0 auto; }
+  .price-card { flex-direction: column; border-radius: 12px; }
+  .price-card-right { border-left: none; border-top: 1px solid rgba(232,52,28,.2); width: 100%; }
+  .price-card-left, .price-card-right { padding: 20px 24px; }
+  .price-strike { font-size: 32px; }
+  .price-current { font-size: 52px; }
+  .price-cta { font-size: 18px !important; padding: 16px 28px !important; width: 100%; max-width: 320px; display: block; margin: 0 auto; }
   .cta-block .micro { font-size: 12px; margin-top: 14px; }
 
   .footer-cta { padding: 52px 0 32px; }
