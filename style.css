@@ -541,13 +541,15 @@ header {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--red), var(--gold));
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--red) 80%, #fff 20%),
+    color-mix(in srgb, var(--red) 70%, #000 30%));
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Bebas Neue';
   font-size: 18px;
-  color: #0a0a0b;
+  color: #fff;
   flex: 0 0 46px;
   overflow: hidden;
 }
@@ -997,7 +999,9 @@ footer { padding: 30px 0; text-align: center; color: var(--ink-dim); font-size: 
 
 /* CTA / Pricing */
 [data-theme="light"] .cta-block {
-  background: linear-gradient(180deg, #f5f4f2 0%, var(--bg) 100%);
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(var(--accent-rgb),.09) 0%, transparent 70%),
+    linear-gradient(180deg, #f5f4f2 0%, var(--bg) 100%);
 }
 [data-theme="light"] .cta-block h2 { color: var(--ink); }
 [data-theme="light"] .cta-block .lead { color: var(--ink-dim); }
