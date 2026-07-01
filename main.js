@@ -5,6 +5,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ─── Adaptive favicon ────────────────────────────────────
+  const faviconEl = document.getElementById('favicon');
+  if (faviconEl) {
+    const darkMq = window.matchMedia('(prefers-color-scheme: dark)');
+    const setFavicon = (dark) => {
+      faviconEl.href = dark
+        ? 'assets/favicon-dark.png'
+        : 'assets/favicon-light.png';
+    };
+    setFavicon(darkMq.matches);
+    darkMq.addEventListener('change', e => setFavicon(e.matches));
+  }
+
   // ─── FAQ accordion ───────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
