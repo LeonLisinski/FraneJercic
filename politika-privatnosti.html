@@ -11,171 +11,147 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* ─── Privacy page overrides ─── */
+  section { padding: 0; border-bottom: none; }
 
-  :root {
-    --bg:       #0a0a0b;
-    --bg-alt:   #111113;
-    --card:     #16161a;
-    --line:     rgba(255,255,255,.08);
-    --ink:      #f2f1ef;
-    --ink-dim:  rgba(242,241,239,.55);
-    --red:      #e8341c;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.7;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ─── HEADER ─── */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(10,10,11,.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-  }
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    max-width: 860px;
-    margin: 0 auto;
-  }
-  .brand {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: var(--ink);
-  }
-  .brand span { color: var(--red); }
-  .back-link {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--ink-dim);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color .2s;
-  }
-  .back-link:hover { color: var(--ink); }
-  .back-link svg { flex-shrink: 0; }
-
-  /* ─── MAIN CONTENT ─── */
-  main {
+  .pp-wrap {
     max-width: 720px;
     margin: 0 auto;
     padding: 64px 24px 96px;
   }
 
+  /* Hero */
   .pp-hero {
     margin-bottom: 56px;
     padding-bottom: 40px;
     border-bottom: 1px solid var(--line);
   }
   .pp-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
     color: var(--red);
     margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pp-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: var(--red);
+    display: inline-block;
   }
   .pp-hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(36px, 6vw, 56px);
-    letter-spacing: 1px;
-    line-height: 1.05;
+    font-size: clamp(42px, 7vw, 72px);
     margin-bottom: 16px;
+    text-transform: uppercase;
   }
   .pp-hero p {
-    color: var(--ink-dim);
     font-size: 15px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+    max-width: 580px;
   }
   .pp-updated {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 16px;
+    gap: 8px;
+    margin-top: 20px;
     font-size: 12px;
     color: var(--ink-dim);
     background: var(--bg-alt);
     border: 1px solid var(--line);
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 999px;
   }
-  .pp-updated span { width: 6px; height: 6px; background: var(--red); border-radius: 50%; display: inline-block; }
+  .pp-updated-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
 
-  /* ─── SECTIONS ─── */
+  /* Sections */
   .pp-section {
-    margin-bottom: 48px;
+    margin-bottom: 52px;
   }
   .pp-section h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: .8px;
+    font-size: 20px;
+    letter-spacing: 1px;
     color: var(--ink);
     margin-bottom: 16px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-bottom: 1px solid var(--line);
+    text-transform: uppercase;
   }
   .pp-section p {
-    color: var(--ink-dim);
     font-size: 15px;
+    color: var(--ink-dim);
+    line-height: 1.75;
     margin-bottom: 12px;
   }
   .pp-section p:last-child { margin-bottom: 0; }
+  .pp-section p a { color: var(--red); text-decoration: none; }
+  .pp-section p a:hover { text-decoration: underline; }
+
+  /* List items - natural flow, no columns */
   .pp-section ul {
     list-style: none;
     margin-top: 12px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
   .pp-section ul li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    color: var(--ink-dim);
+    position: relative;
+    padding-left: 18px;
     font-size: 15px;
+    color: var(--ink-dim);
+    line-height: 1.7;
   }
   .pp-section ul li::before {
     content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
+    position: absolute;
+    left: 4px;
+    top: 9px;
+    width: 5px;
+    height: 5px;
     background: var(--red);
     border-radius: 50%;
-    margin-top: 8px;
     flex-shrink: 0;
   }
+  .pp-section ul li strong { color: var(--ink); font-weight: 600; }
 
+  /* Contact card */
   .pp-contact-card {
     background: var(--card);
     border: 1px solid var(--line);
     border-top: 2px solid var(--red);
-    border-radius: 6px;
+    border-radius: 4px;
     padding: 24px 28px;
     margin-top: 16px;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .pp-contact-card .contact-name {
+  .pp-contact-card.neutral { border-top-color: var(--line); }
+  .pp-contact-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     letter-spacing: .8px;
     color: var(--ink);
+  }
+  .pp-contact-name.small {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
   }
   .pp-contact-row {
     display: flex;
@@ -185,23 +161,52 @@
     color: var(--ink-dim);
   }
   .pp-contact-row svg { color: var(--red); flex-shrink: 0; }
-  .pp-contact-row a { color: var(--ink-dim); text-decoration: none; border-bottom: 1px solid var(--line); transition: color .2s; }
+  .pp-contact-row a {
+    color: var(--ink-dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: color .2s;
+  }
   .pp-contact-row a:hover { color: var(--ink); }
 
-  /* ─── FOOTER ─── */
-  footer {
+  /* Back link */
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-dim);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--ink); }
+
+  /* Override h2 global size for this page */
+  .pp-section h2 { font-size: 20px; }
+
+  /* Footer */
+  .pp-footer {
     padding: 32px 24px;
     border-top: 1px solid var(--line);
     text-align: center;
     font-size: 13px;
     color: var(--ink-dim);
   }
-  footer a { color: var(--ink-dim); text-decoration: none; border-bottom: 1px solid var(--line); }
-  footer a:hover { color: var(--ink); }
+  .pp-footer a {
+    color: var(--ink-dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: color .2s;
+  }
+  .pp-footer a:hover { color: var(--ink); }
+
+  /* Light mode extra */
+  [data-theme="light"] .pp-contact-card { background: var(--bg-alt); }
 
   @media (max-width: 480px) {
-    main { padding: 48px 20px 80px; }
-    .navbar { padding: 14px 20px; }
+    .pp-wrap { padding: 48px 20px 80px; }
+    .pp-contact-card { padding: 18px 20px; }
   }
 </style>
 </head>
@@ -212,24 +217,24 @@
     <a href="index.html" class="brand">TAJNE <span>ONLINE</span> TRENERSTVA</a>
     <a href="index.html" class="back-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Natrag na stranicu
+      Natrag
     </a>
   </div>
 </header>
 
-<main>
+<div class="pp-wrap">
 
   <div class="pp-hero">
     <div class="pp-eyebrow">Pravni dokument</div>
     <h1>Politika<br>Privatnosti</h1>
     <p>Ova politika privatnosti objašnjava kako prikupljamo, koristimo i štitimo vaše osobne podatke u skladu s Općom uredbom o zaštiti podataka (GDPR) i važećim zakonodavstvom Republike Hrvatske.</p>
-    <div class="pp-updated"><span></span> Zadnje ažuriranje: srpanj 2026.</div>
+    <div class="pp-updated"><span class="pp-updated-dot"></span> Zadnje ažuriranje - srpanj 2026.</div>
   </div>
 
   <div class="pp-section">
     <h2>1. Voditelj obrade podataka</h2>
     <div class="pp-contact-card">
-      <div class="contact-name">Frane Jerčić</div>
+      <div class="pp-contact-name">Frane Jerčić</div>
       <div class="pp-contact-row">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <a href="mailto:info@franejercic.com">info@franejercic.com</a>
@@ -249,11 +254,11 @@
     <h2>2. Koje podatke prikupljamo</h2>
     <p>Prikupljamo samo podatke koji su nužni za pružanje usluge i komunikaciju s vama:</p>
     <ul>
-      <li>Ime i prezime — za personalizaciju komunikacije i izrade profila polaznika</li>
-      <li>E-mail adresa — za slanje informacija o programu, potvrde prijave i komunikaciju</li>
-      <li>Broj mobitela — samo ako ga dobrovoljna navedete radi WhatsApp komunikacije</li>
-      <li>Podaci o plaćanju — obrađuju se isključivo putem sigurnih platnih procesora (ne pohranjujemo podatke o kartici)</li>
-      <li>Podaci o korištenju stranice — anonimni analitički podaci (IP adresa, preglednik, trajanje posjeta) putem Google Analytics</li>
+      <li><strong>Ime i prezime</strong> - za personalizaciju komunikacije i izradu profila polaznika</li>
+      <li><strong>E-mail adresa</strong> - za slanje informacija o programu, potvrde prijave i komunikaciju</li>
+      <li><strong>Broj mobitela</strong> - samo ako ga dobrovoljno navedete radi WhatsApp komunikacije</li>
+      <li><strong>Podaci o plaćanju</strong> - obrađuju se isključivo putem sigurnih platnih procesora (ne pohranjujemo podatke o kartici)</li>
+      <li><strong>Podaci o korištenju stranice</strong> - anonimni analitički podaci (IP adresa, preglednik, trajanje posjeta) putem Google Analytics</li>
     </ul>
   </div>
 
@@ -261,10 +266,10 @@
     <h2>3. Svrha i pravna osnova obrade</h2>
     <p>Vaše podatke obrađujemo isključivo za sljedeće svrhe:</p>
     <ul>
-      <li><strong>Izvršenje ugovora</strong> — obrada prijave, pristup edukacijskim materijalima i podrška polaznicima</li>
-      <li><strong>Legitimni interes</strong> — poboljšanje sadržaja i korisničkog iskustva stranice</li>
-      <li><strong>Privola</strong> — slanje newslettera i marketinških poruka (možete se odjaviti u bilo kojem trenutku)</li>
-      <li><strong>Zakonska obveza</strong> — čuvanje računovodstvenih i poreznih podataka sukladno važećem zakonodavstvu</li>
+      <li><strong>Izvršenje ugovora</strong> - obrada prijave, pristup edukacijskim materijalima i podrška polaznicima</li>
+      <li><strong>Legitimni interes</strong> - poboljšanje sadržaja i korisničkog iskustva stranice</li>
+      <li><strong>Privola</strong> - slanje newslettera i marketinških poruka (možete se odjaviti u bilo kojem trenutku)</li>
+      <li><strong>Zakonska obveza</strong> - čuvanje računovodstvenih i poreznih podataka sukladno važećem zakonodavstvu</li>
     </ul>
   </div>
 
@@ -272,12 +277,12 @@
     <h2>4. Dijeljenje podataka s trećim stranama</h2>
     <p>Ne prodajemo niti iznajmljujemo vaše osobne podatke trećim stranama. Podatke možemo dijeliti samo s:</p>
     <ul>
-      <li>Platnim procesori (npr. Stripe, PayPal) — isključivo radi naplate</li>
-      <li>Platformama za e-mail marketing (npr. Mailchimp) — radi slanja newslettera uz vašu prethodnu privolu</li>
-      <li>Google Analytics — anonimni analitički podaci za poboljšanje stranice</li>
-      <li>Nadležnim tijelima — ako to zahtijeva zakon ili sudski nalog</li>
+      <li><strong>Platni procesori</strong> (npr. Stripe, PayPal) - isključivo radi naplate</li>
+      <li><strong>Platforme za e-mail marketing</strong> (npr. Mailchimp) - radi slanja newslettera uz vašu prethodnu privolu</li>
+      <li><strong>Google Analytics</strong> - anonimni analitički podaci za poboljšanje stranice</li>
+      <li><strong>Nadležna tijela</strong> - ako to zahtijeva zakon ili sudski nalog</li>
     </ul>
-    <p>Svi naši partneri su obvezani odgovarajućim ugovorima o obradi podataka i pridržavaju se GDPR-a.</p>
+    <p>Svi naši partneri obvezani su odgovarajućim ugovorima o obradi podataka i pridržavaju se GDPR-a.</p>
   </div>
 
   <div class="pp-section">
@@ -285,23 +290,23 @@
     <p>Vaši podaci pohranjuju se na sigurnim serverima unutar Europskog gospodarskog prostora (EGP). Koristimo standardne mjere zaštite:</p>
     <ul>
       <li>SSL/TLS enkripcija svih komunikacija</li>
-      <li>Ograničen pristup podacima — samo ovlaštene osobe</li>
+      <li>Ograničen pristup podacima - samo ovlaštene osobe</li>
       <li>Redovite sigurnosne provjere i ažuriranja sustava</li>
     </ul>
-    <p>Podatke čuvamo onoliko dugo koliko je potrebno za ispunjenje svrhe za koju su prikupljeni, a najdulje 5 godina od zadnje interakcije, osim ako zakon ne propisuje drugačije.</p>
+    <p>Podatke čuvamo onoliko dugo koliko je potrebno za ispunjenje svrhe, a najdulje 5 godina od zadnje interakcije, osim ako zakon ne propisuje drugačije.</p>
   </div>
 
   <div class="pp-section">
     <h2>6. Vaša prava</h2>
     <p>Sukladno GDPR-u, imate sljedeća prava u pogledu svojih osobnih podataka:</p>
     <ul>
-      <li><strong>Pravo na pristup</strong> — možete zatražiti kopiju svih podataka koje čuvamo o vama</li>
-      <li><strong>Pravo na ispravak</strong> — možete zatražiti ispravak netočnih ili nepotpunih podataka</li>
-      <li><strong>Pravo na brisanje</strong> — možete zatražiti brisanje svojih podataka ("pravo na zaborav")</li>
-      <li><strong>Pravo na ograničenje obrade</strong> — možete zatražiti privremeno zaustavljanje obrade</li>
-      <li><strong>Pravo na prenosivost</strong> — možete dobiti svoje podatke u strojno čitljivom formatu</li>
-      <li><strong>Pravo na prigovor</strong> — možete se usprotiviti obradi podataka u svrhe izravnog marketinga</li>
-      <li><strong>Pravo na povlačenje privole</strong> — u bilo kojem trenutku, bez utjecaja na zakonitost prethodne obrade</li>
+      <li><strong>Pravo na pristup</strong> - možete zatražiti kopiju svih podataka koje čuvamo o vama</li>
+      <li><strong>Pravo na ispravak</strong> - možete zatražiti ispravak netočnih ili nepotpunih podataka</li>
+      <li><strong>Pravo na brisanje</strong> - možete zatražiti brisanje svojih podataka ("pravo na zaborav")</li>
+      <li><strong>Pravo na ograničenje obrade</strong> - možete zatražiti privremeno zaustavljanje obrade</li>
+      <li><strong>Pravo na prenosivost</strong> - možete dobiti svoje podatke u strojno čitljivom formatu</li>
+      <li><strong>Pravo na prigovor</strong> - možete se usprotiviti obradi podataka u svrhe izravnog marketinga</li>
+      <li><strong>Pravo na povlačenje privole</strong> - u bilo kojem trenutku, bez utjecaja na zakonitost prethodne obrade</li>
     </ul>
     <p>Za ostvarivanje bilo kojeg od navedenih prava, kontaktirajte nas putem e-maila ili WhatsAppa navedenih gore. Odgovorit ćemo u roku od 30 dana.</p>
   </div>
@@ -310,8 +315,8 @@
     <h2>7. Kolačići (Cookies)</h2>
     <p>Stranica koristi sljedeće vrste kolačića:</p>
     <ul>
-      <li><strong>Nužni kolačići</strong> — potrebni za ispravno funkcioniranje stranice (npr. pohrana odabrane teme)</li>
-      <li><strong>Analitički kolačići</strong> — Google Analytics za praćenje anonimnog prometa i poboljšanje sadržaja</li>
+      <li><strong>Nužni kolačići</strong> - potrebni za ispravno funkcioniranje stranice (npr. pohrana odabrane teme)</li>
+      <li><strong>Analitički kolačići</strong> - Google Analytics za praćenje anonimnog prometa i poboljšanje sadržaja</li>
     </ul>
     <p>Korištenjem stranice pristajete na korištenje nužnih kolačića. Analitičke kolačiće možete onemogućiti u postavkama preglednika ili putem <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out</a> dodatka.</p>
   </div>
@@ -325,8 +330,8 @@
   <div class="pp-section">
     <h2>9. Pritužbe</h2>
     <p>Ako smatrate da smo povrijedili vaša prava zaštite osobnih podataka, imate pravo podnijeti pritužbu nadležnom nadzornom tijelu:</p>
-    <div class="pp-contact-card" style="border-top-color: var(--line);">
-      <div class="contact-name" style="font-size:16px; font-family:'Inter'; font-weight:600;">Agencija za zaštitu osobnih podataka (AZOP)</div>
+    <div class="pp-contact-card neutral">
+      <div class="pp-contact-name small">Agencija za zaštitu osobnih podataka (AZOP)</div>
       <div class="pp-contact-row">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <a href="https://azop.hr" target="_blank" rel="noopener">azop.hr</a>
@@ -338,14 +343,46 @@
     </div>
   </div>
 
-</main>
+</div>
 
-<footer>
-  <div>
-    © 2026 Frane Jerčić · Sva prava pridržana ·
-    <a href="index.html">Povratak na glavnu stranicu</a>
-  </div>
+<footer class="pp-footer">
+  © 2026 Frane Jerčić · Sva prava pridržana ·
+  <a href="index.html">Povratak na glavnu stranicu</a>
 </footer>
 
+<!-- Theme Picker -->
+<div class="tp" id="themePicker">
+  <button class="tp-btn" id="tpToggle" aria-label="Promjeni temu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+  </button>
+  <div class="tp-panel" id="tpPanel" hidden>
+    <div class="tp-label">Boja</div>
+    <div class="tp-swatches">
+      <button class="tp-swatch" data-color="#e8341c" style="background:#e8341c" aria-label="Crvena" title="Crvena"></button>
+      <button class="tp-swatch" data-color="#2563eb" style="background:#2563eb" aria-label="Plava" title="Plava"></button>
+      <button class="tp-swatch" data-color="#16a34a" style="background:#16a34a" aria-label="Zelena" title="Zelena"></button>
+      <button class="tp-swatch" data-color="#d97706" style="background:#d97706" aria-label="Žuta" title="Žuta"></button>
+      <button class="tp-swatch" data-color="#9333ea" style="background:#9333ea" aria-label="Ljubičasta" title="Ljubičasta"></button>
+      <button class="tp-swatch" data-color="#0891b2" style="background:#0891b2" aria-label="Cyan" title="Cyan"></button>
+      <button class="tp-swatch" data-color="#db2777" style="background:#db2777" aria-label="Roza" title="Roza"></button>
+    </div>
+    <div class="tp-label" style="margin-top:12px;">Pozadina</div>
+    <div class="tp-modes">
+      <button class="tp-mode" data-mode="dark">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        Tamna
+      </button>
+      <button class="tp-mode" data-mode="light">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        Svijetla
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
