@@ -209,7 +209,13 @@ header {
   flex: 1;
   object-fit: contain;
   object-position: bottom;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,.6));
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,.7)) drop-shadow(0 0 60px rgba(0,0,0,.4));
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%),
+                      linear-gradient(to right, transparent 0%, black 8%);
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 8%);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
 }
 .hero-photo .tag {
   display: block;
