@@ -198,7 +198,7 @@ header {
   position: relative;
   z-index: 2;
   aspect-ratio: 4/5;
-  transform: translateY(60px) translateX(12%) scale(0.78);
+  transform: translateY(60px) translateX(12%) scale(0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
