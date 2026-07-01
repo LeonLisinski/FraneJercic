@@ -192,21 +192,16 @@ header {
   align-items: center;
   position: relative;
   z-index: 1;
-  min-height: 420px;
 }
 
 .hero-photo {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: -60px;
-  width: 46%;
+  position: relative;
   z-index: 2;
-  transform: translateX(12%) scale(1.1);
+  aspect-ratio: 4/5;
+  transform: translateY(60px) translateX(12%) scale(1.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
 }
 .hero-photo img {
   width: 100%;
