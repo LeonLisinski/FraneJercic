@@ -143,3 +143,71 @@ document.addEventListener('DOMContentLoaded', () => {
   updateSticky();
 
 });
+
+/* ─── THEME PICKER ─── */
+(function () {
+  const root    = document.documentElement;
+  const picker  = document.getElementById('themePicker');
+  const toggle  = document.getElementById('tpToggle');
+  const panel   = document.getElementById('tpPanel');
+
+  if (!picker) return;
+
+  const COLORS = {
+    '#e8341c': '232,52,28',
+    '#2563eb': '37,99,235',
+    '#16a34a': '22,163,74',
+    '#d97706': '217,119,6',
+    '#9333ea': '147,51,234',
+    '#0891b2': '8,145,178',
+    '#db2777': '219,39,119',
+  };
+
+  function setAccent(hex) {
+    root.style.setProperty('--red', hex);
+    root.style.setProperty('--accent-rgb', COLORS[hex] || '232,52,28');
+    panel.querySelectorAll('.tp-swatch').forEach(s =>
+      s.classList.toggle('active', s.dataset.color === hex)
+    );
+    localStorage.setItem('tp-color', hex);
+  }
+
+  function setMode(mode) {
+    root.setAttribute('data-theme', mode);
+    panel.querySelectorAll('.tp-mode').forEach(b =>
+      b.classList.toggle('active', b.dataset.mode === mode)
+    );
+    localStorage.setItem('tp-mode', mode);
+  }
+
+  function openPanel() {
+    panel.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closePanel() {
+    panel.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', () =>
+    panel.hidden ? openPanel() : closePanel()
+  );
+
+  document.addEventListener('click', e => {
+    if (!picker.contains(e.target)) closePanel();
+  });
+
+  panel.querySelectorAll('.tp-swatch').forEach(s =>
+    s.addEventListener('click', () => setAccent(s.dataset.color))
+  );
+
+  panel.querySelectorAll('.tp-mode').forEach(b =>
+    b.addEventListener('click', () => setMode(b.dataset.mode))
+  );
+
+  const savedColor = localStorage.getItem('tp-color') || '#e8341c';
+  const savedMode  = localStorage.getItem('tp-mode')  || 'dark';
+  setAccent(savedColor);
+  setMode(savedMode);
+}());
