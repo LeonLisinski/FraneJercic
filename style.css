@@ -438,23 +438,46 @@ header {
 }
 /* Padding simulira .wrap centriranje — sadržaj prati ostatak stranice */
 .split .pos {
+  --pos-bg: #0a0a0b;
+  --pos-green: #22c55e;
+  --pos-green-mix: #16a34a;
+  --pos-ink: #f3f1ec;
+  --pos-ink-dim: #9a9a9f;
+  --pos-line: #26262a;
   background: linear-gradient(90deg,
-    var(--bg) 0%,
-    color-mix(in srgb, #111114 86%, #16a34a 14%) 40%,
-    color-mix(in srgb, #141417 88%, #16a34a 12%) 100%);
+    var(--pos-bg) 0%,
+    color-mix(in srgb, #111114 86%, var(--pos-green-mix) 14%) 40%,
+    color-mix(in srgb, #141417 88%, var(--pos-green-mix) 12%) 100%);
   padding: 64px 48px 64px max(24px, calc((100vw - 1120px) / 2 + 24px));
   display: flex;
   flex-direction: column;
+  color: var(--pos-ink);
 }
+.split .pos .eyebrow { color: var(--pos-green); }
+.split .pos .eyebrow::before { background: var(--pos-green); }
+.split .pos h3 { color: var(--pos-ink); }
+.split .pos li { color: var(--pos-ink-dim); border-top-color: var(--pos-line); }
+.split .pos li::before { content: "✓"; color: var(--pos-green); }
 .split .neg {
+  --neg-bg: #0a0a0b;
+  --neg-red: #e8341c;
+  --neg-ink: #f3f1ec;
+  --neg-ink-dim: #9a9a9f;
+  --neg-line: #26262a;
   background: linear-gradient(90deg,
-    color-mix(in srgb, var(--bg) 84%, var(--red) 16%) 0%,
-    color-mix(in srgb, var(--bg) 88%, var(--red) 12%) 60%,
-    var(--bg) 100%);
+    color-mix(in srgb, var(--neg-bg) 84%, var(--neg-red) 16%) 0%,
+    color-mix(in srgb, var(--neg-bg) 88%, var(--neg-red) 12%) 60%,
+    var(--neg-bg) 100%);
   padding: 64px max(24px, calc((100vw - 1120px) / 2 + 24px)) 64px 48px;
   display: flex;
   flex-direction: column;
+  color: var(--neg-ink);
 }
+.split .neg .eyebrow { color: var(--neg-red); }
+.split .neg .eyebrow::before { background: var(--neg-red); }
+.split .neg h3 { color: var(--neg-ink); }
+.split .neg li { color: var(--neg-ink-dim); border-top-color: var(--neg-line); }
+.split .neg li::before { content: "✗"; color: var(--neg-red); }
 .split h3 { font-size: 32px; margin-bottom: 24px; line-height: 1.2; }
 .split ul { list-style: none; margin-top: 8px; }
 .split li {
@@ -473,8 +496,6 @@ header {
   font-size: 18px;
 }
 .split li:first-child { border-top: none; }
-.split .pos li::before { content: "✓"; color: #22c55e; }
-.split .neg li::before { content: "✗"; color: var(--red); }
 .split .quote {
   display: block;
   margin-top: auto;
@@ -489,8 +510,8 @@ header {
   text-shadow: 0 0 28px rgba(34, 197, 94, 0.4);
 }
 .split .neg .quote {
-  color: color-mix(in srgb, #fff 85%, var(--red) 15%);
-  text-shadow: 0 0 28px rgba(var(--accent-rgb), 0.5);
+  color: color-mix(in srgb, #fff 85%, var(--neg-red) 15%);
+  text-shadow: 0 0 28px rgba(232, 52, 28, 0.5);
 }
 
 /* ─── MODULES BACKGROUND ICONS ─── */
@@ -916,8 +937,18 @@ footer {
   }
 
   .split { grid-template-columns: 1fr; gap: 1px; }
-  .split .pos { background: linear-gradient(180deg, color-mix(in srgb, #111114 86%, #16a34a 14%) 0%, var(--bg) 100%); padding: 44px 32px; }
-  .split .neg { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 84%, var(--red) 16%) 0%, var(--bg) 100%); padding: 44px 32px; }
+  .split .pos {
+    background: linear-gradient(180deg,
+      color-mix(in srgb, #111114 86%, #16a34a 14%) 0%,
+      #0a0a0b 100%);
+    padding: 44px 32px;
+  }
+  .split .neg {
+    background: linear-gradient(180deg,
+      color-mix(in srgb, #0a0a0b 84%, #e8341c 16%) 0%,
+      #0a0a0b 100%);
+    padding: 44px 32px;
+  }
 
   .tcard { flex: 0 0 calc((100% - 20px) / 2); }
 
@@ -1000,16 +1031,16 @@ footer {
   .split .pos {
     padding: 40px 16px 36px;
     background: linear-gradient(180deg,
-      var(--bg) 0%,
+      #0a0a0b 0%,
       color-mix(in srgb, #111114 86%, #16a34a 14%) 12%,
       color-mix(in srgb, #111114 86%, #16a34a 14%) 100%);
   }
   .split .neg {
     padding: 36px 16px 40px;
     background: linear-gradient(180deg,
-      color-mix(in srgb, var(--bg) 84%, var(--red) 16%) 0%,
-      color-mix(in srgb, var(--bg) 84%, var(--red) 16%) 88%,
-      var(--bg) 100%);
+      color-mix(in srgb, #0a0a0b 84%, #e8341c 16%) 0%,
+      color-mix(in srgb, #0a0a0b 84%, #e8341c 16%) 88%,
+      #0a0a0b 100%);
   }
   .split h3 { font-size: 22px; }
   .split li { font-size: 14px; }
@@ -1106,27 +1137,7 @@ footer {
 }
 [data-theme="light"] .why-card h3 { color: var(--ink); }
 
-/* Split section – pos green tint, neg accent tint */
-[data-theme="light"] .split .pos {
-  background: linear-gradient(90deg,
-    var(--bg) 0%,
-    color-mix(in srgb, #ffffff 88%, #16a34a 12%) 40%,
-    color-mix(in srgb, #ffffff 91%, #16a34a 9%) 100%);
-}
-[data-theme="light"] .split .neg {
-  background: linear-gradient(90deg,
-    color-mix(in srgb, #ffffff 82%, var(--red) 18%) 0%,
-    color-mix(in srgb, #ffffff 88%, var(--red) 12%) 60%,
-    var(--bg) 100%);
-}
-[data-theme="light"] .split .pos .quote { color: #166534; text-shadow: none; }
-[data-theme="light"] .split .neg .quote {
-  color: color-mix(in srgb, #111 80%, var(--red) 20%);
-  text-shadow: none;
-}
-[data-theme="light"] .split li { color: var(--ink); }
-[data-theme="light"] .split h2 { color: var(--ink); }
-[data-theme="light"] .split .pos li::before { color: #7a6a2e; }
+/* Split section – pos/neg keep fixed green/red themes */
 
 /* Testimonials */
 [data-theme="light"] .tcard {
@@ -1211,19 +1222,7 @@ footer {
 [data-theme="light"] footer { background: var(--bg-alt); color: var(--ink-dim); }
 [data-theme="light"] footer a { color: var(--ink-dim); }
 
-/* Mobile split overrides in light mode */
-@media (max-width: 767px) {
-  [data-theme="light"] .split .pos {
-    background: linear-gradient(180deg,
-      color-mix(in srgb, #ffffff 88%, #16a34a 12%) 0%,
-      var(--bg) 100%);
-  }
-  [data-theme="light"] .split .neg {
-    background: linear-gradient(180deg,
-      color-mix(in srgb, #ffffff 82%, var(--red) 18%) 0%,
-      var(--bg) 100%);
-  }
-}
+/* Mobile split overrides in light mode – pos/neg stay fixed green/red */
 
 /* ─── THEME PICKER WIDGET ─── */
 .tp {
