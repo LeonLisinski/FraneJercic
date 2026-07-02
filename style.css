@@ -885,6 +885,7 @@ footer {
 
   .about-grid { grid-template-columns: 1fr; gap: 20px; }
   .about-photo { aspect-ratio: 4/3; }
+  .about-photo img { object-position: center top; }
 
   .split { grid-template-columns: 1fr; gap: 1px; }
   .split .pos { background: linear-gradient(180deg, color-mix(in srgb, #111114 86%, #16a34a 14%) 0%, var(--bg) 100%); padding: 44px 32px; }
